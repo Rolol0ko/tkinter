@@ -1,3 +1,4 @@
+from email.policy import strict
 from tkinter import *
 from tkinter import messagebox
 import tkinter
@@ -8,7 +9,7 @@ clicks = int(0)
 def ButtonPress():
     global clicks
     clicks += 1
-    print("button Pressed " + str(clicks) + " Times")
+    Widget3.config(text=f"Button Was Clicked {clicks} times")
 
 #set up window
 root = Tk()
@@ -26,5 +27,5 @@ Widget2.pack(ipadx=20, ipady=20, anchor=N)
 Widget3 = tkinter.Label(root, text="Button Was Clicked " + str(clicks) + " times")
 Widget3.pack(ipadx=10,ipady=10)
 
-#run the window
+#run the windows
 root.mainloop()
